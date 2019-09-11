@@ -1,15 +1,18 @@
 <template>
   <div class="hello">
-    hello world
+    <home-header></home-header>
   </div>
 </template>
 
 <script>
+import HomeHeader from '@/pages/components/Header'
 export default {
-  name: 'HelloWorld'
+  name: 'Home',
+  components: {
+    HomeHeader
+  }
 }
-</script>
-
+ </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
