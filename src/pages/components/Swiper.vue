@@ -22,14 +22,16 @@ export default{
 	}
 }	
 </script>
-<style lang="stylus" scoped>
-#swiper >>> .swiper-pagination-bullet-active
-  background:#fff
+<style  scoped>
 #swiper
-  overflow:hidden
-  width:100%
+  {
+  overflow:hidden;
+  width:100%;
+  }
   .img-swiper
-    width:100%
+    {
+    width:100%;
     margin: -50px 0px -50px; 
-	 overflow:hidden
+	overflow:hidden;
+    }
 </style>
