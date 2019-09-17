@@ -2,7 +2,7 @@
 	<div class='icons'>
     <swiper>
       <swiper-slide v-for="(page,index) of pages" :key="index">
-  		<div class="icon" v-for="item in page">
+  		<div class="icon" v-for="item in page" :key="item.id">
   			<div class="icon-img">
   				<img class="icon-img-content" :src='item.imgUrl' />	
   			</div>
@@ -65,7 +65,7 @@ export default{
           pages[page]=[]
         }
         pages[page].push(item)
-      });
+      })
       return pages
     }
   }
@@ -77,6 +77,7 @@ export default{
     overflow:hidden;
   	height:0;
   	padding-bottom:50%;
+    margin-top:.2rem;
   }
   .icon{
   		position: relative;

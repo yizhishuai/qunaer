@@ -22,18 +22,6 @@ export default{
 	}
 }	
 </script>
-<<<<<<< HEAD
-<style lang="stylus" scoped>
-#swiper >>> .swiper-pagination-bullet-active
-  background:#fff
-#swiper
-  overflow:hidden
-  width:100%
-  .img-swiper
-    width:100%
-    margin: -50px 0px -50px; 
-	 overflow:hidden
-=======
 <style  scoped>
 #swiper
   {
@@ -46,5 +34,4 @@ export default{
     margin: -50px 0px -50px; 
 	overflow:hidden;
     }
->>>>>>> origin/swiper
 </style>
