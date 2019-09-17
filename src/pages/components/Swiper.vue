@@ -1,9 +1,8 @@
 <template>
 	<div id="swiper">
-	<swiper :options="swiperOption">
-    <swiper-slide><img class="img-swiper" src="https://images.pexels.com/photos/2884462/pexels-photo-2884462.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" ></swiper-slide>
-    <swiper-slide><img class="img-swiper" src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></swiper-slide>
-    <swiper-slide><img class="img-swiper" src="https://images.pexels.com/photos/2884572/pexels-photo-2884572.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></swiper-slide>
+	<swiper :options="swiperOption" v-if="list.length">
+    <swiper-slide  v-for="item in list" :key="item.id"><img class="img-swiper" :src="item.imgUrl">
+    </swiper-slide>
     <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
     </div>
@@ -11,13 +10,15 @@
 <script>
 export default{
 	name:'HomeSwiper',
+  props:{
+    list:Array
+  },
 	data(){
 		return {
 			swiperOption:{
 		    pagination: '.swiper-pagination',
             loop:true
-	      }
-	      	
+	      }	
 	   }
 	}
 }	
@@ -30,8 +31,7 @@ export default{
   }
   .img-swiper
     {
-    width:100%;
-    margin: -50px 0px -50px; 
-	overflow:hidden;
+   width:100%;
+	 overflow:hidden;
     }
 </style>
