@@ -12,7 +12,7 @@
 import HomeHeader from '@/pages/components/Header'
 import HomeSwiper from '@/pages/components/Swiper'
 import HomeIcons from '@/pages/components/Icons'
-import HomeRecommend from '@/pages/components/Recommend'
+import HomeRecommend from '@/pages/components/Recommend.vue'
 import HomeWeekend from '@/pages/components/Weekend'
 export default {
   name: 'Home',
