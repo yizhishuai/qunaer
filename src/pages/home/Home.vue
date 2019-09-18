@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import HomeHeader from '@/pages/components/Header'
-import HomeSwiper from '@/pages/components/Swiper'
-import HomeIcons from '@/pages/components/Icons'
-import HomeRecommend from '@/pages/components/Recommend'
-import HomeWeekend from '@/pages/components/Weekend'
+import HomeHeader from '@/pages/home/components/Header'
+import HomeSwiper from '@/pages/home/components/Swiper'
+import HomeIcons from '@/pages/home/components/Icons'
+import HomeRecommend from '@/pages/home/components/Recommend'
+import HomeWeekend from '@/pages/home/components/Weekend'
 import axios from'axios'
 export default {
   name: 'Home',
