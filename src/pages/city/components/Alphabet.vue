@@ -1,16 +1,20 @@
 <template>
 	<div class="alphabet">
-		<div class="alphabet-item">A</div>
-		<div class="alphabet-item">A</div>
-		<div class="alphabet-item">A</div>
-		<div class="alphabet-item">A</div>
-		<div class="alphabet-item">A</div>
-		<div class="alphabet-item">A</div>
+		<div class="alphabet-item" v-for="(item,key) of cities" :key="key"
+		@click="handleLetterClick">{{key}}</div>
 	</div>
 </template>
 <script>
 export default{
-	name:'CityAlphabet'
+	name:'CityAlphabet',
+	props:{
+		cities:Object
+	},
+	methods:{
+		handleLetterClick(e){
+			this.$emit('change',e.target.innerText)
+		}
+	}
 }	
 </script>
 <style scoped>
