@@ -29,11 +29,11 @@
 		v-for="innerItem of item"
 		:key="innerItem.id">{{innerItem.name}}</div>	
 	</div>
-	
 	</div>
 </div>
 </div>
 </template>
+<script src="https://cdn.jsdelivr.net/npm/better-scroll"></script>
 <script>
 import BScroll from 'better-scroll'
 export default{
@@ -43,15 +43,14 @@ export default{
 		cities:Object,
 		letter:String
 	},
-	mounted(){
+	mounted () {
 		this.scroll = new BScroll(this.$refs.wrapper)
 	},
 	watch:{
 		letter(){
 			if(this.letter){
 				const element = this.$refs[this.letter][0]
-				this.scroll.scrollToElement(element)
-				console.log(this.letter)
+				this.scroll.scrollToElement(this.$refs[this.letter][0])
 			}
 		}
 	}
@@ -71,7 +70,7 @@ export default{
       	border-color: #ccc;
       }
 	.list{
-	overflow: hidden;
+	
     left: 0;
     right: 0;
     bottom: 0;
